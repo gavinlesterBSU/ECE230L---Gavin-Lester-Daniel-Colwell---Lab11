@@ -11,7 +11,7 @@ module modCount(
    wire w2;
    wire w3;
    
-   assign dr = (~m1 & m2 & m3) | (rst);
+    assign dr = (m1 & ~m2 & m3) | (rst);
    
     dff dff1(
         .D(s1),
