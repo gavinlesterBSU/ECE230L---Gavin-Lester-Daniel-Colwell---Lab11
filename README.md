@@ -17,6 +17,12 @@ Daniel Colwell, Gavin Lester
 We started the lab as usual, with listening to the lecture, and reading through
 the guide. It was nice that it was similar to our homework, and that we could
 use our D flip flops, T flip flops, and full adders from previous labs. According to the variables given in the guide, we added them to top and started stringing together the dff and full adder to create a modulo counter, in a file named "modCount". The diagram provided in the guide proved quite useful during this part.
+Funnily enough, we used the D flip flop file for the modulo file, as expected, but also used it for the JKFF file, which was needed for the TFF file.
+For some time (about an hour :') ), we had an error where it read "failed to trigger modulo counter", and we tried various things to fix it. The schematic looked correct, but in the waveform test, the mc_state kept toggling between 1 and 2 rather than counted to 5
+then resetting to 0 as intended.
+Eventually we found that we had an incorrect wire connection in one of the adders, a m3 where it was supposed to be an m2 in the A input. Also, the D flip flop that created the final output needed to be switched to a T flip flop, even though in the walkthrough, it is shown as a D flip flop..?
+
+Anyways, we passed all test cases, and then programmed the Basys 3 board, and did the final check with a TA and finished the lab.
 ## Lab Questions
 
 ### 1 - Why does the Modulo Counter actually divide clocks by 2 * Count?
